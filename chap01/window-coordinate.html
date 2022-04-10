@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><h1>자바스크립트의 좌표는 항상 좌상</h1></p>
+
+    <p><h3>Element.getBoundingRect() : element 오브젝트 좌표에 대한 다양한 값들이 저장 되어 있다</h3></p>
+    <br>
+    <br>
+    <p>top : 상측에서부터 오브젝트 시작까지의 길이</p>
+    <p>left : 좌측에서 부터 오브젝트 시작까지의 길이</p>
+    <p>width : 오브젝트의 가로</p>
+    <p>height : 오브젝트의 세로</p>
+    <p>right : 좌측에서 부터 오브젝트 끝까지의 길이</p>
+    <p>bottom : 상측에서 부터 오브젝트 끝까지의 길이</p>
+
+    <hr>
+    <br>
+    <p>event.client x,y : document 현재 화면에서 해당 오브젝트와의 x,y값을 의미</p>
+    <p>event.page x,y : 전체 페이지 화면에서 해당 오브젝트와의 x,y값을 의미 (스크롤이 길수록 값은 더 커지게 됨)</p>
+    
+    <hr>
+    <br>
+    <p>body style { overflow : hidden } : 컨텐츠가 window를 벗어나면 스크롤을 못하게 할 수 있다 </p>
+    
+    <hr>
+    <br>
+    <p>window.scrollBy(x,y) : x,y좌표만큼 이동 </p>
+    <p>window.scrollTo(x,y) : x,y좌표로 이동 </p>
+    <!-- <p>window.scrollBy(x,y) : 해당 오브젝트로 이동 </p> -->
+</body>
+</html>

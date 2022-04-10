@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag {
+            display: inline-block;
+            background-color: thistle;;
+            padding: 16px;
+            margin-top: 16px;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tag">Window Size</div>
+
+    <hr>
+    <br>
+        <p>
+            <h3>window.screen : 모니터의 해상도값과 같다 (값이 변하지 않아요) </h3>
+        </p>
+        <p>
+            <h3>window.outer : 메뉴텝과 url창 포함, 스크롤바 포함</h3>
+        </p>
+        <p>
+            <h3>window.inner : 메뉴탭과 url창 제외, 스크롤바 포함 (= document + scrollBar)</h3>
+        </p>
+        <p>
+            <h3>documentElement.clientWidth : 메뉴탭과 url창 제외, 스크롤바 제외 (= document)</h3>
+        </p>
+
+    <script>
+        const tag = document.querySelector('.tag');
+        function updateTag(){
+            tag.innerHTML = `
+            window.screen : ${window.screen.width}, ${window.screen.height} </br>
+            window.outer : ${window.outerWidth}, ${window.outerHeight} </br>
+            window.inner : ${window.innerWidth}, ${window.innerHeight} </br>
+            documentElement.clientWidth : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+            `;
+        }
+        window.addEventListener('resize',()=>{
+            updateTag();
+        });
+        updateTag();
+    </script>
+</body>
+</html>

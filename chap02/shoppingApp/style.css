@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 13px;
+    box-shadow: 5px 5px 13px 1px rgb(190, 190, 190);
+}
+.container .colored {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 135deg, rgb(253, 184, 213), rgb(149, 188, 255) );
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    width: 100%;
+    height:41px;
+}
+
+.container .colored  span {
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 16px;
+    cursor : context-menu;
+}
+
+.middle-container {
+    background-color: rgb(252, 245, 251);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.middle-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  .middle-container::-webkit-scrollbar-thumb {
+    background-color: #ffaede;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  .middle-container::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+
+  
+.middle-container .item-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12px;
+    align-items: center;
+    border-bottom: 1px dotted gray ;
+    cursor : context-menu;
+}
+
+.middle-container .item-box .fa-trash-can:hover {
+    color: rgb(226, 43, 86);
+    cursor: pointer;
+}
+
+.insert-item {
+    height: 30px;
+    width: 295px;
+    top: 365px;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    vertical-align: bottom;
+    cursor : context-menu;
+}
+input:focus {
+    outline: none;
+}
+
+.container .colored2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 135deg, rgb(253, 184, 213), rgb(149, 188, 255) );
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    height:50px;
+}
+.container .colored2 .insert-btn {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.insert-btn > i {
+    color: white;
+    font-size: 25px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>모든 Element들은 EventTarget을 상속 받는다 </h3><br>
+    <h3>브라우저가 HTML파일을 읽어서 한줄 한줄 DOM트리로 변환을 하게 된다.</h3><br>
+    <h3>브라우저가 이해할 수 있도록 자신들만의 트리로 만드는 것</h3><br>
+    <p>각각의 태그 분석 -> 브라우저가 인식 할 수 있는 오브젝트(DOM트리)객체로 변환 (자바스크립트에서는 node로 변환)
+    <hr>
+    <br>
+    <!-- 상속관계를 태그로 표시하기 
+        <EventTarget>
+            <node>
+                <Document></Document>
+                <Element>
+                    <HTMLElement>
+                        흔히 보는 태그들            
+                    </HTMLElement>
+                </Element>
+                <Text></Text>
+            </node>
+        </EventTarget> -->
+
+    <hr><br>
+    EventTarget MDN webAPI에서 확인하기
+    .addEventListener()
+    .removeAddEventListener()
+    .dispatcjEvent()
+
+</body>
+</html>

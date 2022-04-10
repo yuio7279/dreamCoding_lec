@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <p><h2>성능개선을 위해 레이어 기능을 활용하자</h2></p>
+        <hr>
+        <p>브라우저에서 URL을 입력하게 되면 이런 순서로 진행이 됩니다</p>
+        <p>HTML파일 requests/response > loading > scripting(DOM요소로 변환) > 
+            rendering(renderTree) > layout > painting > composition</p>
+        <p>브라우저만의 언어로 바꾸는 Construction파트( ~rendering)</p>
+        <p>윈도우에 그림을 그려주는 Operation파트(layout, painting, composition)</p>
+            <br><hr>
+
+
+
+        <p>css속성중 will-change : 따로 레이어를 만들어준다. 너무많으면 오히려 성능이 감소</p>
+        
+        <!-- 예시, 레이어를 추가한다.
+            img { 
+          z-index: 100;
+          will-change: opacity;
+        } -->
+
+
+
+
+        <p>DOM요소가 작을수록<br>
+            CSS규칙이 작을수록</p>
+        <p>태그, div, wrapping클래스 요소 최소화</p><br>
+        <p><h3>동적인 요소를 줄때 성능 : 
+            layout > paint > composition 순으로 좋다<h3></h3><br>
+            - 동적인 요쇼를 줄 때 layout 전부가 수정되어야 한다면 성능저하가 크게 된다</h3>
+        </p>
+        <h3><a href="http://csstriggers.com/"> http://csstriggers.com/ </a></h3>
+        <!-- 
+             Blink : 크롬, 엣지
+             Gacko : 파이어폭스
+             WebKit : IOS
+             EdgeHTML : 오래된 엣지브라우저
+
+             ---
+            Change from default : 처음 발생할 때
+            Subsequent updates : 주기적으로 업데이트 될 때
+        -->
+        <br><br><hr>
+        <h3>
+            <p>브라우저 layer접근하기</p>
+            <p>개발자도구 > 추가옵션(땡땡땡) > More tools > Layers</p>
+            <hr><br>
+            <p>성능 확인하기</p>
+            <p>개발자도구 > Performance > Screenshots > Record </p>
+            <p>프로파일링 된 창을 보면 Experience바의 색상을 보고 판단할 수 있다</p>
+            <p>체크 : summary, frames(60fps정도 나와야함, 16ms)</p>
+            <hr>
+            <p>control + shift + p 팔레트 사용</p>
+            <p>Show layout shift regions : layout이 어떻게 수정되고, 변경되는부분을 보여준다.</p>
+        </h3>
+
+</body>
+</html>

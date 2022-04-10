@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.target {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.borderTop {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top:50%;
+    background-color: white;
+}
+.borderLeft {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left:50%;
+    background-color: white;
+}
+.msg {
+    position: absolute;
+    color:white;
+    font-size: large;
+    font-weight: 300;
+}

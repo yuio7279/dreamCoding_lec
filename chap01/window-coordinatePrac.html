@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        nav {
+            margin: 15px;
+            display: flex;
+            justify-content: end;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            
+        }
+        nav input {
+            margin: 5px;
+            color: green;
+            width: 200px;
+            height: 50px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: bisque;
+            margin: 10px;
+        }
+        #click {
+            
+            background-color: coral;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="button" class="scrollBy" value="scroll by 100px">
+        <input type="button" class="scrollTo" value="scroll to 100px">
+        <input type="button" class="scrollInto" value="scroll into clicked box">
+        
+    </nav>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box" id="click"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        'use strict'
+        const click = document.querySelector('#click')
+        let click_rect = click.getBoundingClientRect();
+        click.addEventListener('click',(e)=>{
+            console.log(click_rect);
+            console.log(`client : ${e.clientX}, ${e.clientY}`);
+            console.log(`page : ${e.pageX}, ${e.pageY}`);
+
+
+        });
+        const scrollby = document.querySelector('.scrollBy');
+        const scrollto = document.querySelector('.scrollTo');
+        const scrollInto = document.querySelector('.scrollInto');
+
+        scrollby.addEventListener('click',()=>{
+            window.scrollBy({top : 100, left : 0, behavior: 'smooth'});
+        });
+        scrollto.addEventListener('click',()=>{
+            window.scrollTo({top : 100, left : 0, behavior: 'smooth'});
+        });
+        scrollInto.addEventListener('click',()=>{
+            click.scrollIntoView({behavior:"smooth"});
+        });
+
+
+    </script>
+</body>
+</html>

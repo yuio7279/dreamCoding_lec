@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: brown;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      img {
+        z-index: 100;
+        will-change: opacity;
+      }
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="img/avatar.png" alt="avatar" />
+      <!-- <img src="img/people.png" alt="people" /> -->
+      <h1 id="brand">Dream Coding</h1>
+      <h3>Don't forget to code your dream</h3>
+    </section>
+    <span>Hello World!</span>
+    <h3>
+      <p>브라우저에서 개발자도구 > Elements탭을 보며 확인하기</p>
+      <p>==$0 : console탭에서 $0을 사용하면 해당 Element에 접근할 수 있다.</p>
+      <p>childNodes메서드는 엔터키(text)까지 포함한 모든 태그들을 리스트형으로 담는다</p>
+    </h3>
+    <script>
+      //selector 이용
+      const image = document.querySelector('img[src="img/avatar.png"]');
+      const images = document.querySelectorAll('img');
+      console.log(images);
+
+      //부모노드에 동적으로 추가하기
+      const section = document.querySelector('section');
+
+      const h2 = document.createElement('h2');
+      h2.setAttribute('class','title'); //<h2 class="title"></h2>
+      h2.textContent = 'This is a title'; //<h2 class="title">This is a title</h2>
+      // section.appendChild(h2); //h2태그 추가
+
+      const h3 = document.querySelector('h3');
+      section.insertBefore(h2,h3); //h3태그 전에 h2태그 추가
+
+      //InnerHTML vs element ?
+      //InnerHTML : ``기호 안에 한번에 넣을 수 있다.
+      // section.innerHTML = `
+      // <img src="img/avatar.png" alt="avatar" />
+      // <h1 id="brand">Dream Coding</h1>
+      // `;
+
+      //element : 해당 element에 대한 ref를 가지고 있어
+      //해당 element만 제거를 해줄 수 있다
+      section.removeChild(h2);
+      
+
+    </script>
+  </body>
+</html>
