@@ -27,6 +27,7 @@ btn.addEventListener('click',(e)=>{
     else{
         addItem(item.value);
         item.value='';
+        
     }
 });
 
