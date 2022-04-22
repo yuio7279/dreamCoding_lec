@@ -27,7 +27,7 @@ btn.addEventListener('click',(e)=>{
     else{
         addItem(item.value);
         item.value='';
-        
+
     }
 });
 
@@ -49,7 +49,7 @@ function addItem(value){
 
     const middle_container = document.querySelector('.middle-container');
     middle_container.appendChild(item_box)
-    console.log('추가완료');
+    console.log('추가완료@');
 }
 
 
