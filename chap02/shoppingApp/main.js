@@ -30,7 +30,6 @@ btn.addEventListener('click',(e)=>{
     }
 });
 
-
 function addItem(value){
     const span = document.createElement('span');
     span.setAttribute('class','item');
